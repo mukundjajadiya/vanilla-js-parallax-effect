@@ -16,13 +16,18 @@ const main = () => {
 
       let progress = window.innerHeight * index - scrollY;
 
-      section[index].style.color = `${
-        bgColorArray[index % bgColorArray.length].color
-      }`;
+      if (scrollY > 10) {
+        section[index].style.color = `${
+          bgColorArray[index % bgColorArray.length].color
+        }`;
 
-      section[index].style.backgroundColor = `${
-        bgColorArray[index % bgColorArray.length].bgColor
-      }`;
+        section[index].style.backgroundColor = `${
+          bgColorArray[index % bgColorArray.length].bgColor
+        }`;
+      } else {
+        section[index].style.backgroundColor = `#F0F0F0`;
+        section[index].style.color = `#000000`;
+      }
 
       element.style.transform = `translateY(${progress / 10}px)`;
 

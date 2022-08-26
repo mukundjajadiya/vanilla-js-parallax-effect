@@ -16,7 +16,7 @@
   width: 100%;
   min-height: 100vh;
   transition: 3s;
-  background: rgb(255, 235, 235);
+  background: #f0f0f0;
 }
 
 .section__container {
